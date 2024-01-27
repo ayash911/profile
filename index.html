@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            font-family: Garamond, serif;
+            font-size: 3vw;
+        }
+
+        img {
+            width: 15vh;
+            height: 15vh;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            width: 30vw;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #additionalDetails {
+            display: none;
+        }
+
+        @media screen and (max-width: 400px) {
+            h1 {
+                color: red;
+            }
+
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+        }
+    </style>
+    <script>
+        function Details() {
+            var details = document.getElementById('additionalDetails');
+            var button = document.getElementById('toggle');
+
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+                button.innerText = 'Hide';
+            } else {
+                details.style.display = 'none';
+                button.innerText = 'Show';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Yash Agrawal</h1>
+        <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="MyPic">
+        <p>Web Developer</p>
+    </header>
+
+    <section id="personalInfo">
+        <h2>Personal Information</h2>
+        <ul>
+            <li>Name: Yash Agrawal</li>
+            <li>Email: <a href="mailto:iit2023232@iiita.ac.in">iit2023232@iiita.ac.in</a></li>
+            <li>Location: <a
+                    href="https://www.google.com/maps/place/Prayagraj,+Uttar+Pradesh/@25.4021719,81.6367733,11z/data=!3m1!4b1!4m6!3m5!1s0x398534c9b20bd49f:0xa2237856ad4041a!8m2!3d25.4358011!4d81.846311!16zL20vMDIwc2tj?entry=ttu">Prayagraj,
+                    Uttar Pradesh, India</a> </li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>College - <a href="https://www.iiita.ac.in/"> Indian Institute of Information Technology.</a></li>
+            <li>Grade 12 - Euro School</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+        </ul>
+    </section>
+
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <p>Coding, Reading, Hiking</p>
+    </section>
+
+    <section>
+        <button id="toggle" onclick="Details()">Show</button>
+        <div id="additionalDetails">
+            <h2>Date of Birth</h2>
+            <p>09-10-2005</p>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
