@@ -1,0 +1,30 @@
+*{
+    font-size: xx-large;
+}
+
+.container {
+    flex: 400px;
+    padding: 50px;
+    text-align: center;
+
+}
+
+h1{
+    text-align: center;
+}
+
+.screen-body-item {
+    flex: 1;
+    padding: 50px;
+}
+
+input {
+    margin: 10px;
+}
+
+.showdata {
+    color: black;
+    font-size: 1.2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

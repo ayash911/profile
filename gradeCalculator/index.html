@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1 style="color: rgb(0, 242, 255)">Student Grade Calculator</h1>
+    <div class="container">
+        <div class="screen-body-item">
+            <div class="app">
+                <div class="form-group">
+                    Enter Student's marks in WEBD:
+                    <input type="text" class="form-control" placeholder="WEBD" id="webd" />
+                </div>
+                <div class="form-group">
+                    Enter Student's marks in COA:
+                    <input type="text" class="form-control" placeholder="COA" id="coa" />
+                </div>
+                <div class="form-group">
+                    Enter Student's marks in DSA:
+                    <input type="text" class="form-control" placeholder="DSA" id="dsa" />
+                </div>
+                <div class="form-group">
+                    Enter Student's marks in DMS:
+                    <input type="text" class="form-control" placeholder="DMS" id="dms" />
+                </div>
+                <div class="form-group">
+                    Enter Student's marks in PDC:
+                    <input type="text" class="form-control" placeholder="PDC" id="pdc" />
+                </div>
+                <div>
+                    <input type="button" value="Calculate Percentage" class="form-button" onclick="calculate()" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group showdata"><p id="showdata"></p></div>
+    </div>
+</body>
+
+</html>
