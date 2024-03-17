@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <title>Login register form</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="overlay" id="overlay">
+      <div class="sign-in" id="sign-in">
+        <h1>Welcome Back!</h1>
+        <p>Enter your details to continue</p>
+        <button class="switch-button" id="slide-right-button">Sign In</button>
+      </div>
+      <div class="sign-up" id="sign-up">
+        <h1>Hello, Friend!</h1>
+        <p>New Here? Enter your details to get started</p>
+        <button class="switch-button" id="slide-left-button">Sign Up</button>
+      </div>
+    </div>
+    <div class="form">
+      <div class="sign-in" id="sign-in-info">
+        <h1>Sign In</h1>
+        <form id="sign-in-form">
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <p class="forgot-password">Forgot your password?</p>
+          <button class="control-button in">Sign In</button>
+        </form>
+      </div>
+      <div class="sign-up" id="sign-up-info">
+        <h1>Create Account</h1>
+        <form id="sign-up-form">
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <button class="control-button up">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

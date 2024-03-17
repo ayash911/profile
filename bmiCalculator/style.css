@@ -1,0 +1,15 @@
+.container{
+    text-align: center;
+}
+#btn:hover{
+    cursor: pointer;
+}
+*{
+    color: aqua;
+    background-color: rebeccapurple;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+input{
+    width: 10vw;
+}
