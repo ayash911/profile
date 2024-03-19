@@ -13,8 +13,8 @@ window.addEventListener("DOMContentLoaded", () => {
             const subTotal = parseFloat(amount + tipInDollars);
             const total = subTotal / people;
 
-            document.querySelector(".info__tip").innerHTML = `⭐️Tip:  ₹${parseFloat(tipInDollars).toFixed(2)}`;
-            document.querySelector(".info__total").innerHTML = `💰 Total:  ₹${total.toFixed(2)} ${people > 1 ? "each" : ""}`;
+            document.querySelector(".info_tip").innerHTML = `⭐️Tip:  ₹${parseFloat(tipInDollars).toFixed(2)}`;
+            document.querySelector(".info_total").innerHTML = `💰 Total:  ₹${total.toFixed(2)} ${people > 1 ? "each" : ""}`;
             document.querySelector(".info").style = "display: block";
         }
     });

@@ -10,14 +10,14 @@
 
 <body>
     <div class="calculator">
-        <h1 class="calculator__title">Tip Calculator</h1>
+        <h1 class="calculator_title">Tip Calculator</h1>
         <div class="field">
-            <label for="amount" class="field__label">Amount </label>
-            <input type="text" name="amount" id="amount" placeholder="₹" class="field__input">
+            <label for="amount" class="field_label">Amount (₹) </label>
+            <input type="text" name="amount" id="amount" placeholder="₹" class="field_input">
         </div>
         <div class="field">
-            <label for="tip" class="field__label">Tip </label>
-            <select name="tip" id="tip" class="field__input">
+            <label for="tip" class="field_label">Tip (%) </label>
+            <select name="tip" id="tip" class="field_input">
                 <option value="0" selected>0%</option>
                 <option value="5" id="fiv">5%</option>
                 <option value="10" id="ten">10%</option>
@@ -26,13 +26,13 @@
             </select>
         </div>
         <div class="field">
-            <label for="people" class="field__label">People </label>
-            <input type="number" value="1" min="1" step="1" id="people" class="field__input">
+            <label for="people" class="field_label">People </label>
+            <input type="number" value="1" min="1" step="1" id="people" class="field_input">
         </div>
         <button id="calculate">Calculate</button>
         <div class="info">
-            <p class="info__tip"></p>
-            <p class="info__total"></p>
+            <p class="info_tip"></p>
+            <p class="info_total"></p>
         </div>
     </div>
 
