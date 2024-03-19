@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Payrole Management System</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center; font-weight: bolder;">Payrole Management</h1>
+        <p class="description" style="font-weight: bold;">Enter the bill amount and the cash given by the customer and
+            know the minimum number of notes to return.</p>
+
+        <label for="input-bill"><strong>Enter the bill amount (₹)</strong></label>
+        <input class="input-bill" placeholder="₹" id="bill" type="number" min="0" required />
+
+        <label for="cash-given"><strong>Cash Given (₹)</strong></label>
+        <input class="cash-given" placeholder="₹" id="cash" type="number" min="0" required />
+
+        <button class="check-btn" id="btn">Calculate</button>
+
+        <p id="error"></p>
+
+        <table class="table">
+            <caption><strong>Return Change</strong></caption>
+            <tr class="row">
+                <th class="row">Notes (₹)</th>
+                <td class="no-of-notes">Number of Notes</th>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+body{
+    background-color: aquamarine;
+    font-family:sans-serif;
+    font-weight: bold;
+}
+
+.container {
+    height: 89vh;
+    gap: 7px;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    margin: auto;
+    padding: 30px;
+    background-color: rgb(246, 255, 0);
+}
+
+.table {
+    border: 5px solid black;
+    width: 100%;
+}
+
+.row {
+    border: 3px solid black;
+    text-align: center;
+}
+
+.no-of-notes {
+    border: 3px solid black;
+    text-align: center;
+}
+
+.check-btn {
+    margin-top: 15px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.input-bill,
+.cash-given {
+    padding: 5px;
+    width: 100%;
+    font-weight: bolder;
+}
+
+#error {
+    color: red;
+    font-weight: bold;
+    /* margin-top: 10px; */
+    display: none;
+}
