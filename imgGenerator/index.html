@@ -1,51 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title></title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript">
-
-
-        function myFun() {
-            var inp = document.getElementById("inp");
-            var keyword = inp.value
-            // $(document).ready(function () {
-            //     $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-            //         { tags: keyword, tagmode: "any", format: "json" },
-            //         function (data) {
-            //             var rnd = Math.floor(Math.random() * data.items.length);
-            //             var image_src = data.items[rnd]['media']['m'].replace("_m", "_b");
-            //             $('body').css('background-image', "url('" + image_src + "')");
-            //         });
-            // });
-            function OnLoad() {
-                search = new google.search.ImageSearch();
-
-                search.setSearchCompleteCallback(this, searchComplete, null);
-
-                search.execute(keyword);
-            }
-
-            function searchComplete() {
-                if (search.results && search.results.length > 0) {
-                    var rnd = Math.floor(Math.random() * search.results.length);
-
-                    //you will probably use jQuery and something like: $('body').css('background-image', "url('" + search.results[rnd]['url'] + "')");
-                    document.body.style.backgroundImage = "url('" + search.results[rnd]['url'] + "')";
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-size: cover;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <input type="text" id="inp">
-    <button onclick="myFun()">Click </button>
+    <div class="image-area">
+        <img class="image" src="https://img.freepik.com/free-photo/background_53876-32170.jpg?size=626&ext=jpg" alt="Fetched Image">
+    </div>
+    <input type="text" id="inp" placeholder="Enter keyword...">
+    <button onclick="myFun()">Generate Image</button>
 </body>
-
 </html>
