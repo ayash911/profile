@@ -2,7 +2,7 @@ function Details() {
     var details = document.getElementById('additionalDetails');
     var button = document.getElementById('toggle');
 
-    if (details.style.display === 'none') {
+    if (details.style.display === '' || details.style.display === 'none') {
         details.style.display = 'block';
         button.innerText = 'Hide';
     } else {

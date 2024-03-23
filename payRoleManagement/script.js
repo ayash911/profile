@@ -3,6 +3,7 @@ var cashGiven = document.getElementById("cash");
 var checkBtn = document.getElementById("btn");
 var errMsg = document.getElementById("error");
 var noOfNotes = document.querySelector(".no-of-notes");
+var c = 0;
 
 var notes = [2000, 500, 100, 50, 20, 10, 5, 1];
 
@@ -14,32 +15,36 @@ function errorHandle(error) {
 function hideMessage() {
     errMsg.style.display = "none";
 }
+if (c == 0) {
+    function clickHandler() {
+        hideMessage();
 
-function clickHandler() {
-    hideMessage();
+        var billAmount = parseFloat(inputBill.value);
+        var cashAmount = parseFloat(cashGiven.value);
 
-    var billAmount = parseFloat(inputBill.value);
-    var cashAmount = parseFloat(cashGiven.value);
+        if (isNaN(billAmount) || isNaN(cashAmount) || billAmount < 0 || cashAmount < 0) {
+            errorHandle("Please enter valid positive amounts.");
+            return;
+        }
 
-    if (isNaN(billAmount) || isNaN(cashAmount) || billAmount < 0 || cashAmount < 0) {
-        errorHandle("Please enter valid positive amounts.");
-        return;
-    }
+        if (cashAmount < billAmount) {
+            errorHandle("Cash given is less than the bill amount.");
+            return;
+        }
 
-    if (cashAmount < billAmount) {
-        errorHandle("Cash given is less than the bill amount.");
-        return;
-    }
+        var remaining = cashAmount - billAmount;
 
-    var remaining = cashAmount - billAmount;
-
-    for (var i = 0; i < notes.length; i++) {
-        var noteCount = Math.floor(remaining / notes[i]);
-        remaining %= notes[i];
-        var row = document.createElement("tr");
-        row.innerHTML = `<td class="row">${notes[i]}</td><td class="no-of-notes">${noteCount}</td>`;
-        document.querySelector(".table").appendChild(row);
+        for (var i = 0; i < notes.length; i++) {
+            var noteCount = Math.floor(remaining / notes[i]);
+            remaining %= notes[i];
+            var row = document.createElement("tr");
+            row.innerHTML = `<td class="row">${notes[i]}</td><td class="no-of-notes">${noteCount}</td>`;
+            document.querySelector(".table").appendChild(row);
+        }
+        checkBtn.innerHTML = "Generated";
+        c = 1;
+        checkBtn.disabled = true;
+        checkBtn.style.cursor = "not-allowed";
     }
 }
-
 checkBtn.addEventListener("click", clickHandler);
